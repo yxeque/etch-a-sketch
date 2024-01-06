@@ -1,33 +1,33 @@
-const container = document.getElementById("container");
+const grid = document.getElementById("grid");
 const applyBtn = document.getElementById("applyBtn");
 
 function createGrid(size) {
-  container.innerHTML = ""; // Clear previous grid
+  grid.innerHTML = ""; // Clear previous grid
 
   for (let i = 0; i < size * size; i++) {
-    const pixel = document.createElement("div");
-    pixel.classList.add("pixel");
-    pixel.addEventListener("mouseover", function () {
-      pixel.style.backgroundColor = "black";
+    const cell = document.createElement("div");
+    cell.classList.add("cell");
+    cell.addEventListener("mouseover", function () {
+      cell.style.backgroundColor = "black";
     });
-    container.appendChild(pixel);
+    grid.appendChild(cell);
   }
 
   adjustGridSize(size);
 }
 
 function adjustGridSize(size) {
-  // Adjust container size
-  container.style.width = "750px";
-  container.style.height = "750px";
+  // Adjust grid size
+  grid.style.width = "750px";
+  grid.style.height = "750px";
 
-  // Adjust pixel size based on the new grid size
-  const pixelSize = 100 / size; // Calculate the size percentage
-  const pixels = document.querySelectorAll(".pixel");
-  pixels.forEach((pixel) => {
-    pixel.style.width = `calc(${pixelSize}% - 2px)`; // 2px for the border
-    pixel.style.height = `calc(${pixelSize}% - 2px)`; // 2px for the border
-    pixel.style.border = "1px solid black";
+  // Adjust cell size based on the new grid size
+  const cellSize = 100 / size; // Calculate the size percentage
+  const cells = document.querySelectorAll(".cell");
+  cells.forEach((cell) => {
+    cell.style.width = `calc(${cellSize}% - 2px)`; // 2px for the border
+    cell.style.height = `calc(${cellSize}% - 2px)`; // 2px for the border
+    cell.style.border = "1px solid black";
   });
 }
 

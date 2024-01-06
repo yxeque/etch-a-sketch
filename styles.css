@@ -5,7 +5,7 @@ html {
   box-sizing: border-box;
 }
 
-#container {
+#grid {
   display: flex;
   flex-wrap: wrap;
   width: 750px;
@@ -13,7 +13,7 @@ html {
   border: 1px solid black;
 }
 
-.pixel {
+.cell {
   width: calc(100% / 16);
   height: calc(100% / 16);
   border: 1px solid black;
