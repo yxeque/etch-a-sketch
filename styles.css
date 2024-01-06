@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Chivo:700|Chivo%20Mono:400');
+
 :root {
     --text: #e2dcf1;
     --background: #0c0716;
@@ -11,8 +13,6 @@
     padding: 0;
     margin: 0;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Chivo:700|Chivo%20Mono:400');
 
 body {
   font-family: 'Chivo Mono';
@@ -37,3 +37,63 @@ h4 {font-size: 1.777rem; /* 28.48px */}
 h5 {font-size: 1.333rem; /* 21.28px */}
 
 small {font-size: 0.750rem; /* 12px */}
+
+button {
+    all: unset;
+}
+  
+button:focus {
+    outline: revert;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--primary);
+    padding: 32px;
+}
+
+.canvas {
+    width: 750px;
+    height: 750px;
+    background-color: whitesmoke;
+    border: 4px solid var(--accent);
+    border-radius: 5px;
+}
+
+button {
+    text-align: center;
+    padding: 8px 16px;
+    height: 25px;
+    width: 125px;
+    background-color: var(--secondary);
+    color: var(--text);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--accent);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
