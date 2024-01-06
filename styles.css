@@ -1,16 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo:700|Chivo%20Mono:400");
+
+:root {
+  --text: #ebe2ef;
+  --background: #130c16;
+  --primary: #c0a4cc;
+  --secondary: #63375b;
+  --accent: #ab6991;
+}
+
 body,
 html {
   height: 100%;
   margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Chivo Mono";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Chivo";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #grid {
+  background-color: var(--text);
   display: flex;
   flex-wrap: wrap;
   width: 750px;
   height: 750px;
-  border: 1px solid black;
+  border: 5px solid var(--accent);
 }
 
 .cell {
