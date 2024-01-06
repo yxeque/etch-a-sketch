@@ -1,99 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Chivo:700|Chivo%20Mono:400');
-
-:root {
-    --text: #e2dcf1;
-    --background: #0c0716;
-    --primary: #aa91e1;
-    --secondary: #3d1d87;
-    --accent: #6a36de;
-
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
-* {
-    padding: 0;
-    margin: 0;
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
 }
 
-body {
-  font-family: 'Chivo Mono';
-  font-weight: 400;
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: 'Chivo';
-  font-weight: 700;
-}
-
-html {font-size: 100%;} /* 16px */
-
-h1 {font-size: 4.210rem; /* 67.36px */}
-
-h2 {font-size: 3.158rem; /* 50.56px */}
-
-h3 {font-size: 2.369rem; /* 37.92px */}
-
-h4 {font-size: 1.777rem; /* 28.48px */}
-
-h5 {font-size: 1.333rem; /* 21.28px */}
-
-small {font-size: 0.750rem; /* 12px */}
-
-button {
-    all: unset;
-}
-  
-button:focus {
-    outline: revert;
-}
-
-body {
-    background-color: var(--background);
-    color: var(--text);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1 {
-    color: var(--primary);
-    padding: 32px;
-}
-
-.canvas {
-    width: 750px;
-    height: 750px;
-    background-color: whitesmoke;
-    border: 4px solid var(--accent);
-    border-radius: 5px;
-}
-
-button {
-    text-align: center;
-    padding: 8px 16px;
-    height: 25px;
-    width: 125px;
-    background-color: var(--secondary);
-    color: var(--text);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: var(--accent);
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 64px;
-}
-
-.controls {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+.pixel {
+  width: calc(100% / 16);
+  height: calc(100% / 16);
+  border: 1px solid black;
+  box-sizing: border-box;
 }
