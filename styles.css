@@ -8,27 +8,15 @@
   --accent: #ab6991;
 }
 
-body,
-html {
-  height: 100%;
-  margin: 0;
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
 }
 
 body {
+  height: 100%;
   font-family: "Chivo Mono";
   font-weight: 400;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Chivo";
-  font-weight: 700;
 }
 
 html {
@@ -57,4 +45,29 @@ body {
   width: calc(100% / 16);
   height: calc(100% / 16);
   border: 1px solid black;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--primary);
+  font-weight: 700;
+  padding-top: 32px;
+}
+
+button {
+  all: unset;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+  border: 1px solid var(--secondary);
+}
+
+#controls {
+  padding: 16px;
+}
+
+.footer {
+  padding: 16px;
 }

@@ -1,5 +1,6 @@
-const grid = document.getElementById("grid");
-const applyBtn = document.getElementById("applyBtn");
+const grid = document.querySelector("#grid");
+const applyBtn = document.querySelector("#applyBtn");
+const clearBtn = document.querySelector("#clearBtn");
 
 function createGrid(size) {
   grid.innerHTML = ""; // Clear previous grid
@@ -40,6 +41,13 @@ applyBtn.addEventListener("click", () => {
   } else {
     alert("Please enter a value between 1 and 100.");
   }
+});
+
+clearBtn.addEventListener("click", () => {
+  const cells = document.querySelectorAll(".cell");
+  cells.forEach((cell) => {
+    cell.style.backgroundColor = "";
+  });
 });
 
 createGrid(16); // Initial grid size (16x16)
