@@ -13,6 +13,10 @@ function createGrid(size) {
     container.appendChild(pixel);
   }
 
+  adjustGridSize(size);
+}
+
+function adjustGridSize(size) {
   // Adjust container size
   container.style.width = "750px";
   container.style.height = "750px";
@@ -27,7 +31,7 @@ function createGrid(size) {
   });
 }
 
-applyBtn.addEventListener("click", function () {
+applyBtn.addEventListener("click", () => {
   const gridSizeInput = document.getElementById("gridSize");
   const newSize = parseInt(gridSizeInput.value);
 
