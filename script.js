@@ -1,6 +1,8 @@
 const grid = document.querySelector("#grid");
 const applyBtn = document.querySelector("#applyBtn");
 const clearBtn = document.querySelector("#clearBtn");
+const randomizeBtn = document.querySelector("#randomizeBtn");
+let isRandomizing = false;
 
 function createGrid(size) {
   grid.innerHTML = ""; // Clear previous grid
@@ -9,7 +11,12 @@ function createGrid(size) {
     const cell = document.createElement("div");
     cell.classList.add("cell");
     cell.addEventListener("mouseover", function () {
-      cell.style.backgroundColor = "black";
+      if (isRandomizing) {
+        const randomColor = getRandomColor();
+        cell.style.backgroundColor = randomColor;
+      } else {
+        cell.style.backgroundColor = "black";
+      }
     });
     grid.appendChild(cell);
   }
@@ -49,5 +56,31 @@ clearBtn.addEventListener("click", () => {
     cell.style.backgroundColor = "";
   });
 });
+
+randomizeBtn.addEventListener("click", function () {
+  isRandomizing = !isRandomizing; // Toggle the flag
+});
+
+function randomizeColors(cells) {
+  cells.forEach((cell) => {
+    const randomColor = getRandomColor();
+    cell.style.backgroundColor = randomColor;
+  });
+}
+
+function resetColors(cells) {
+  cells.forEach((cell) => {
+    cell.style.backgroundColor = ""; // Reset to default color
+  });
+}
+
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
 
 createGrid(16); // Initial grid size (16x16)
