@@ -14,8 +14,10 @@ function createGrid(size) {
       if (isRandomizing) {
         const randomColor = getRandomColor();
         cell.style.backgroundColor = randomColor;
+        randomizeBtn.classList.add("active");
       } else {
         cell.style.backgroundColor = "black";
+        randomizeBtn.classList.remove("active");
       }
     });
     grid.appendChild(cell);
